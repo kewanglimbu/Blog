@@ -1,0 +1,16 @@
+﻿@model Post
+
+@{
+    ViewData["Title"] = "Post page";
+}
+
+<div class="text-center">
+    <h3 class="display-4">Welcome to @ViewData["Title"] </h3>
+
+</div>
+
+<div class="text-center">
+    @Model.Title
+    @Model.Body
+
+</div>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Post>
+
+@{
+    ViewData["Title"] = "Home Page";
+    int Serialno = 0;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <table>
+    <tr>
+        <th>S.N</th>
+      <th>Title</th>
+      <th>Actions</th>
+    
+      </tr>
+    @foreach(var post in Model)
+    {
+                <tr>
+                    <td>@{Serialno++;} @Serialno</td>
+               
+                <td><a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">@post.Title</a></td>
+                <td>
+                   
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@post.Id" >Edit</a>
+                    
+                </td>
+
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@post.Id">Delete</a></td>
+
+       
+        </tr>
+    }
+    </table>
+</div>
+
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js
+"></script>
