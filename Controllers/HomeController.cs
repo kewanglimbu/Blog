@@ -17,7 +17,7 @@ namespace BlogWebApp.Controllers
           
             _repo = repository;
         }
-
+        
         public IActionResult Index()
         {
             var posts = _repo.GetAllPosts();
